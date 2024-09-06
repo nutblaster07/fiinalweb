@@ -152,7 +152,7 @@
                 <a href="port/debjaniCV.pdf" download class="btn btn2">Download CV</a>
             </div>
             <div class="contact-right">
-                <form onsubmit="emailsend(); reset(); return false;">
+                <form name="submit-to-google-sheet">
                     <input type="text" name="Name" placeholder="Enter Your Name" required>
                     <input type="email" name="Email" placeholder="Enter Your Email" required>
                     <textarea name="Message" rows="6"placeholder="Your Message"></textarea>
@@ -191,7 +191,8 @@
         sidemenu.style.right="-200px";
     }
 </script>
-      <script>
+
+  <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbyG1zM7nyrgXqpPFqlqdEULW5WsrxmawyWUmz8pNqJU7HinNwJrf_tQi4q9OoizR1uD4Q/exec'
     const form = document.forms['submit-to-google-sheet']
     const msg = document.getElementById("msg")
@@ -208,7 +209,5 @@
         .catch(error => console.error('Error!', error.message))
     })
   </script> 
-
-    
 </body>
 </html>
